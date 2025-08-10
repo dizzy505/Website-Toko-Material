@@ -168,7 +168,3 @@ Catatan: `style.css` memiliki warna khusus untuk elemen tertentu. Jika ingin 100
 - Validasi/normalisasi input yang lebih ketat (hindari duplikat)
 - Model prediksi yang lebih kaya (musiman, ARIMA/Prophet, dsb.)
 - Peran pengguna lebih granular dan audit log
-
-## Lisensi
-
-Proyek ini bersifat pembelajaran/internal. Silakan sesuaikan kebutuhan perizinan untuk penggunaan produksi.
