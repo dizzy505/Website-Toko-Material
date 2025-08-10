@@ -10,9 +10,8 @@
 }
 
 /* Hide Streamlit branding */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+/* Previously hid Streamlit branding; unhide to allow theme toggle */
+#MainMenu, footer, header {visibility: visible !important;}
 
 /* Custom sidebar */
 .css-1d391kg {

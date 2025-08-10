@@ -6,6 +6,13 @@ from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode, DataReturnMode
 def render(db):
     st.header("Manajemen Produk")
 
+    if st.session_state.get("product_added_success"):
+        msg = st.session_state.get("product_added_message", "Produk berhasil ditambahkan!")
+        st.toast(msg)
+        del st.session_state["product_added_success"]
+        if "product_added_message" in st.session_state:
+            del st.session_state["product_added_message"]
+
     tab1, tab2 = st.tabs(["Daftar Produk", "Tambah Produk"])
 
     with tab1:
@@ -123,7 +130,8 @@ def render(db):
             if submitted:
                 if nama_produk and jenis and harga > 0:
                     if db.add_product(nama_produk, varian, jenis, harga):
-                        st.success("Produk berhasil ditambahkan!")
+                        st.session_state["product_added_success"] = True
+                        st.session_state["product_added_message"] = f"Produk '{nama_produk}' berhasil ditambahkan"
                         st.rerun()
                     else:
                         st.error("Gagal menambahkan produk!")

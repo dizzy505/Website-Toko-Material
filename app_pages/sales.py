@@ -7,6 +7,13 @@ from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode, DataReturnMode
 def render(db):
     st.header("Manajemen Penjualan")
 
+    if st.session_state.get("sale_added_success"):
+        msg = st.session_state.get("sale_added_message", "Transaksi berhasil ditambahkan!")
+        st.toast(msg)
+        del st.session_state["sale_added_success"]
+        if "sale_added_message" in st.session_state:
+            del st.session_state["sale_added_message"]
+
     tab1, tab2 = st.tabs(["Data Penjualan", "Tambah Transaksi"])
 
     with tab1:
@@ -128,7 +135,9 @@ def render(db):
 
                 if submitted:
                     if db.add_sale(tanggal, product_id, jumlah, harga_satuan):
-                        st.success("Transaksi berhasil ditambahkan!")
+                        product_label = products_df[products_df['id']==product_id]['nama_produk'].iloc[0]
+                        st.session_state["sale_added_success"] = True
+                        st.session_state["sale_added_message"] = f"Transaksi '{product_label}' berhasil ditambahkan"
                         st.rerun()
                     else:
                         st.error("Gagal menambahkan transaksi!")

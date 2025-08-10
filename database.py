@@ -19,7 +19,8 @@ class DatabaseManager:
                 host=self.host,
                 database=self.database,
                 user=self.user,
-                password=self.password
+                password=self.password,
+                port=self.port
             )
             return connection
         except Error as e:
@@ -31,7 +32,8 @@ class DatabaseManager:
             connection = mysql.connector.connect(
                 host=self.host,
                 user=self.user,
-                password=self.password
+                password=self.password,
+                port=self.port
             )
             cursor = connection.cursor()
             
