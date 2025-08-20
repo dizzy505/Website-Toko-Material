@@ -15,9 +15,6 @@ def render(db):
         "Laporan Kinerja Produk"
     ])
 
-    # -----------------------------
-    # 1) Laporan Penjualan
-    # -----------------------------
     with tab_sales:
         st.subheader("Laporan Penjualan")
         sales_df = db.get_sales_data()
@@ -83,9 +80,6 @@ def render(db):
         else:
             st.info("Belum ada data penjualan")
 
-    # -----------------------------
-    # 2) Laporan Prediksi (ringkas, tanpa modul predictor)
-    # -----------------------------
     with tab_pred:
         st.subheader("Laporan Prediksi (Sederhana)")
         sales_df = db.get_sales_data()
@@ -145,9 +139,6 @@ def render(db):
                     mime="text/csv",
                 )
 
-    # -----------------------------
-    # 3) Laporan Data User
-    # -----------------------------
     with tab_users:
         st.subheader("Laporan Data User")
         if hasattr(db, 'get_users'):
@@ -170,9 +161,6 @@ def render(db):
         else:
             st.warning("Fungsi get_users() belum tersedia di DatabaseManager. Restart aplikasi setelah update, atau hubungi admin.")
 
-    # -----------------------------
-    # 4) Kinerja Produk (ABC / Pareto)
-    # -----------------------------
     with tab_abc:
         st.subheader("Laporan Kinerja Produk")
         sales_df = db.get_sales_data()
