@@ -1,339 +1,321 @@
-/* Custom CSS for Streamlit App */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-/* Global Styles */
 .main {
-    padding: 1rem 2rem;
-    font-family: 'Inter', sans-serif;
+  padding: 1rem 2rem;
+  font-family: "Inter", sans-serif;
 }
 
-/* Hide Streamlit branding */
-/* Previously hid Streamlit branding; unhide to allow theme toggle */
-#MainMenu, footer, header {visibility: visible !important;}
+#MainMenu,
+footer,
+header {
+  visibility: visible !important;
+}
 
-/* Custom sidebar */
 .css-1d391kg {
-    background: linear-gradient(135deg, #34699A 0%, #34699A 100%);
+  background: linear-gradient(135deg, #34699a 0%, #34699a 100%);
 }
 
 .css-1d391kg .css-1v0mbdj {
-    color: white;
+  color: white;
 }
 
-/* Main header */
 .main-header {
-    background: linear-gradient(135deg, #34699A 0%, #34699A 100%);
-    color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #34699a 0%, #34699a 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .main-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .main-header p {
-    margin: 0.5rem 0 0 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
-/* Cards */
 .metric-card {
-    background: #CFFFE2;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #34699A;
-    margin-bottom: 1rem;
-    transition: transform 0.2s ease;
+  background: #cfffe2;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #34699a;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
 }
 
 .metric-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .metric-card h3 {
-    color: #333;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.1rem;
-    font-weight: 600;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .metric-card .metric-value {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #34699A;
-    margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #34699a;
+  margin: 0;
 }
 
 .metric-card .metric-delta {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
 
-/* Alert cards */
 .alert-card {
-    padding: 0;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    border-left: 4px solid;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  padding: 0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .alert-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .alert-high {
-    background-color: #ffebee;
-    border-left-color: #f44336;
-    color: #b71c1c;
+  background-color: #ffebee;
+  border-left-color: #f44336;
+  color: #b71c1c;
 }
 
 .alert-medium {
-    background-color: #fff3cd;
-    border-left-color: #ffc107;
-    color: #856404;
+  background-color: #fff3cd;
+  border-left-color: #ffc107;
+  color: #856404;
 }
 
 .alert-low {
-    background-color: #d1ecf1;
-    border-left-color: #17a2b8;
-    color: #0c5460;
+  background-color: #d1ecf1;
+  border-left-color: #17a2b8;
+  color: #0c5460;
 }
 
-/* Buttons */
 .stButton > button {
-    background: linear-gradient(135deg, #34699A 0%, #34699A 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1.5rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #34699a 0%, #34699a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .stButton > button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Form inputs */
 .stTextInput > div > div > input,
 .stSelectbox > div > div > select,
 .stNumberInput > div > div > input {
-    border: 2px solid #e1e5e9;
-    border-radius: 8px;
-    padding: 0.5rem;
-    transition: border-color 0.3s ease;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: border-color 0.3s ease;
 }
 
 .stTextInput > div > div > input:focus,
 .stSelectbox > div > div > select:focus,
 .stNumberInput > div > div > input:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-/* Data tables */
 .dataframe {
-    border: none !important;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none !important;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dataframe thead th {
-    background: linear-gradient(135deg, #34699A 0%, #34699A 100%);
-    color: white;
-    font-weight: 600;
-    padding: 1rem;
-    border: none;
+  background: linear-gradient(135deg, #34699a 0%, #34699a 100%);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
 }
 
 .dataframe tbody td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #f0f0f0;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .dataframe tbody tr:hover {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
-/* Success/Error messages */
 .stSuccess {
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-    border-radius: 8px;
-    color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  color: #155724;
 }
 
 .stError {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    border-radius: 8px;
-    color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  color: #721c24;
 }
 
 .stWarning {
-    background-color: #fff3cd;
-    border: 1px solid #ffeaa7;
-    border-radius: 8px;
-    color: #856404;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  color: #856404;
 }
 
-/* Sidebar styling */
 .css-1d391kg {
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
 }
 
 .css-1d391kg .css-1v0mbdj {
-    color: white;
-    font-weight: 500;
+  color: white;
+  font-weight: 500;
 }
 
-/* Navigation menu */
 .nav-menu {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-menu .stSelectbox {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* Login form */
 .login-container {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .login-header {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .login-header h2 {
-    color: #333;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .login-header p {
-    color: #666;
-    font-size: 0.9rem;
+  color: #666;
+  font-size: 0.9rem;
 }
 
-/* Charts */
 .plotly-graph-div {
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-/* Responsive design */
-/* Responsive columns */
 .stColumn > div {
-    padding: 0 8px;
+  padding: 0 8px;
 }
 
-/* Make sure columns have equal height */
 .stColumn {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Adjust card spacing */
 .alert-card {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
-
-/* Responsive adjustments */
 @media (max-width: 992px) {
-    .stColumn {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
+  .stColumn {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
-    .main {
-        padding: 1rem;
-    }
-    
-    .stColumn {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    
-    .main-header h1 {
-        font-size: 2rem;
-    }
-    
-    .metric-card {
-        padding: 1rem;
-    }
-    
-    .metric-card .metric-value {
-        font-size: 1.5rem;
-    }
+  .main {
+    padding: 1rem;
+  }
+
+  .stColumn {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .main-header h1 {
+    font-size: 2rem;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metric-card .metric-value {
+    font-size: 1.5rem;
+  }
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #34699A 0%, #34699A 100%);
-    border-radius: 10px;
+  background: linear-gradient(135deg, #34699a 0%, #34699a 100%);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
 }
 
-/* Loading animation */
 .loading-spinner {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #667eea;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #667eea;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
