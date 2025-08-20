@@ -44,8 +44,8 @@ def render(db):
                 with col1:
                     new_role = st.selectbox(
                         "Ubah Role",
-                        options=["admin", "staff", "viewer"],
-                        index=["admin", "staff", "viewer"].index(sel["role"]),
+                        options=["admin", "staff"],
+                        index=["admin", "staff"].index(sel["role"]),
                         key=f"role_{sel['id']}"
                     )
                     if st.button("Simpan Role", key=f"save_role_{sel['id']}"):
@@ -85,7 +85,7 @@ def render(db):
             username = st.text_input("Username *")
             password = st.text_input("Password *", type="password")
             password2 = st.text_input("Ulangi Password *", type="password")
-            role = st.selectbox("Role *", ["admin", "staff", "viewer"], index=1)
+            role = st.selectbox("Role *", ["admin", "staff"], index=1)
             submitted = st.form_submit_button("Tambah User")
             if submitted:
                 if not username or not password or not password2:

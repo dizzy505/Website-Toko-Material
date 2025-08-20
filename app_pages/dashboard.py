@@ -7,7 +7,7 @@ def render(db):
     st.markdown(
         """
     <div class="main-header">
-        <h1>Dashboard Penjualan Toko ABC</h1>
+        <h1>Dashboard Penjualan Toko Material</h1>
         <p>Sistem Prediksi dan Manajemen Stok Material</p>
     </div>
     """,
